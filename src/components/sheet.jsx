@@ -1,14 +1,10 @@
 import React, { Component } from "react";
+import "../sheet.css";
 
 class Sheet extends Component {
   render() {
     return (
       <div>
-        {/* Hello world */}
-        <div className="awesome" style={{ border: "1px solid red" }}>
-          <label htmlFor="name">Enter your name: </label>
-          <input type="text" id="name" />
-        </div>
         <form className="charsheet" action="/api/upload" method="post">
           <header>
             <section className="charname">
@@ -35,7 +31,7 @@ class Sheet extends Component {
                 </li>
                 <li>
                   <label htmlFor="alignment">Alignment</label>
-                  <input id name="alignment" placeholder="Lawful Good" />
+                  <input name="alignment" placeholder="Lawful Good" />
                 </li>
                 <li>
                   <label htmlFor="experiencepoints">Experience Points</label>
