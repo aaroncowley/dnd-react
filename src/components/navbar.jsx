@@ -4,11 +4,11 @@ import NavItem from "./navItem";
 class NavBar extends Component {
   state = {
     links: [
-      { id: 1, linkName: "home" },
-      { id: 2, linkName: "roll" },
-      { id: 3, linkName: "page" },
-      { id: 4, linkName: "page" },
-      { id: 5, linkName: "page" }
+      { id: 1, linkName: "home", linkPath: "/" },
+      { id: 2, linkName: "roll", linkPath: "/roll" },
+      { id: 3, linkName: "page", linkPath: "/" },
+      { id: 4, linkName: "page", linkPath: "/" },
+      { id: 5, linkName: "page", linkPath: "/" }
     ]
   };
 
@@ -18,7 +18,12 @@ class NavBar extends Component {
         <div>
           <ul className="nav nav-tabs justify-content-center">
             {this.state.links.map(link => (
-              <NavItem key={link.id} link={link} linkName={link.linkName} />
+              <NavItem
+                key={link.id}
+                link={link}
+                linkName={link.linkName}
+                linkPath={link.linkPath}
+              />
             ))}
           </ul>
         </div>
